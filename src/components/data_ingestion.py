@@ -3,7 +3,7 @@ import os
 import numpy as np 
 import pandas as pd 
 from pymongo import MongoClient
-from zipfile import path 
+from zipfile import Path 
 from src.constant import *
 from src.exception import CustomException
 from src.logger import logging
@@ -62,7 +62,7 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e,sys)
     
-    def initiate_data_ingestion(self)-> path:
+    def initiate_data_ingestion(self)-> Path:
         logging.info("Enterd initiated_data_ingestion method of data_integration class")
          
         try:
